@@ -4,18 +4,14 @@ import AutoComplete from "./AutoComplete"
 
 function Results(){
 
-const context = useContext(ResultContext)
-
-const value = context.value
-console.log(value)
+const context = useContext(ResultContext);
 
 return(
-<div className="bg-picture">
-    <div className="blacLine"></div>
-    <div className="blackCircle">
-        <div className ="whiteCircle">
-        <div className ="whiteCircleBlackBorder"></div>
-           
+<div className="bg">
+    <div className="bg_blacLine"></div>
+    <div className="bg_blackCircle">
+        <div className ="bg_whiteCircle">
+          <div className ="bg_whiteCircleBlackBorder"></div>
         </div>
     </div>
     <div className="app" onDragOver={context.dragOver}>
@@ -29,19 +25,16 @@ return(
         </form>
         {context.resultsPokemons.map(pokemon => (
             <div key={pokemon.id}  className="pokemonCard"
-                 style={{transform: `rotate(${pokemon.rotate}deg)`}}
+                 style={{transform: `rotate(${pokemon.number}deg)`}}
                  draggable="true"
                  onDragEnd={context.dropCard}
             >
-                    {/* <div className ="x-field"></div> */}
                 <div className="invisible-element">
-                    <div className="close" onClick={()=> context.passDispatch({type:'DELETE_POKEMON',payload:pokemon }
-                    // ,{type:'RETURN_OPTION',payload:value }
-                    )
-                        }>X
+                    <div className="close" onClick={()=> context.dispatch({type:'DELETE_POKEMON',payload:pokemon}
+                    )}>X
                     </div> 
                 </div>
-                <img src={pokemon.picPokemon} alt="" />
+                <img src={pokemon.imageUrl} alt="" />
             </div>
             )) }
     </div>

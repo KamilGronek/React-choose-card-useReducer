@@ -1,5 +1,4 @@
 import React, {useEffect,useState,useReducer} from 'react';
-import {v4 as uuid} from 'uuid'
 import axios from 'axios';
 import './App.css';
 import  {reducer,initialState} from "./components/reducers"
@@ -8,16 +7,12 @@ import {ResultProvider,AutoCompleteProvider} from "./components/context"
 
 function App() {
    const [state, dispatch] = useReducer(reducer, initialState)
-   const options = state.fetchPokemons.map(pokemon =>pokemon.name);
-    const [value, setValue] = useState(options[0]);
-
-     const [show,setShow] = useState(false)
-
-   const picPokemon = state.fetchPokemons
-   .filter(picture => picture.name === value)
-   .map(pictureImg => pictureImg.imageUrl);
-   
+   const options = state.pokemonPack.map(pokemon =>pokemon.name);
+   const [value, setValue] = useState(options[0]);
    const url = "https://api.pokemontcg.io/v1/cards"
+
+   const pokemonValue = state.pokemonPack
+  .filter(picture => picture.name === value);
 
   useEffect(() => {
     axios.get(url)
@@ -32,18 +27,10 @@ function App() {
 
   const addPokemon = (e) =>{
     e.preventDefault();
-
     if(! value){
        return 
     }
-    const addValue ={
-      id:uuid(),
-      picPokemon,
-      rotate: Math.floor(Math.random() * 20),
-      value:value
-    };
-    dispatch({type: 'ADD_POKEMON' , payload: addValue})
-    dispatch({type: 'OPTION_UPDATE', payload: addValue})
+    dispatch({type: 'ADD_POKEMON' , payload: pokemonValue})
     setValue();
   }
 
@@ -57,7 +44,8 @@ function App() {
   }
 
  return (
-    <ResultProvider value={{passDispatch:dispatch,
+    <ResultProvider value={{
+      dispatch,
       addPokemon,
       dropCard,
       dragOver,
@@ -76,7 +64,4 @@ function App() {
 }
 
 export default App;
-
-
-
 

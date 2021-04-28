@@ -3,8 +3,7 @@ import {AutoCompleteContext} from "./context"
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 
- function AutoComplete(){
-
+export default function AutoComplete(){
     const context = useContext(AutoCompleteContext)
     return(
       <Autocomplete
@@ -22,5 +21,3 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
     />
     )
   }
-
-export default AutoComplete

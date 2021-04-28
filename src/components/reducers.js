@@ -1,63 +1,48 @@
 export const initialState = {
-    fetchPokemons : [],
-    resultsPokemons :[],
-    error: '',
-    totalResults: 0
-  }
-  
-  
-  export function reducer(prevState,action){
-     switch(action.type) {
-       case 'FETCH_SUCCESS':
-           return{
-          fetchPokemons:action.payload,
+  pokemonPack : [],
+  resultsPokemons :[],
+  error: '',
+  totalResults: 0
+}
+
+export function reducer(prevState,action){
+   switch(action.type) {
+     case 'FETCH_SUCCESS':
+         return{
+        pokemonPack:action.payload,
+        resultsPokemons :[],
+        error: '',
+        totalResults: 0
+       }
+      case 'FETCH_ERROR' :
+         return{
+          pokemonPack:[],
            resultsPokemons :[],
-           error: '',
-           totalResults: 0
+           error: 'Something went wrong'
          }
-        case 'FETCH_ERROR' :
-           return{
-            fetchPokemons:[],
-             resultsPokemons :[],
-             error: 'Something went wrong'
-           }
-        case 'ADD_POKEMON': {
-           const arrayPokemons= {
-             ...prevState,
-            resultsPokemons:[...prevState.resultsPokemons,action.payload],
-            error: 'Choose value',
-            totalResults: prevState.resultsPokemons.length + 1
-          }
-          console.log('After ADD_POKEMON: ', arrayPokemons);
-          return arrayPokemons;
+      case 'ADD_POKEMON': {
+         const arrayPokemons= {
+           ...prevState,
+          pokemonPack: prevState.pokemonPack.filter(pokemonPack => pokemonPack.name !== action.payload[0].name),
+          resultsPokemons:[...prevState.resultsPokemons,action.payload[0]],
+          error: 'Choose value',
+          totalResults: prevState.resultsPokemons.length + 1,
         }
-       case 'DELETE_POKEMON': {
-        const arrayPokemons= {
-            ...prevState,
-            resultsPokemons: prevState.resultsPokemons.filter(getPokemon => getPokemon.id !== action.payload.id),
-            totalResults: prevState.resultsPokemons.length - 1,
-        }
-        console.log('After DELETE_POKEMON: ', arrayPokemons);
-        return arrayPokemons
-       }
-       case  'OPTION_UPDATE' :{
-        const optionUpdate = {
+        console.log('After ADD_POKEMON: ', arrayPokemons);
+        return arrayPokemons;
+      }
+     case 'DELETE_POKEMON': {
+      const arrayPokemons= {
           ...prevState,
-            fetchPokemons: prevState.fetchPokemons.filter(fetchPokemons => fetchPokemons.name !== action.payload.value)
-        }
-        console.log('After OPTION_UPDATE: ', optionUpdate);
-        return optionUpdate
-       }
-      //  case 'RETURN_OPTION':{
-      //   const optionUpdate = {
-      //     ...prevState,
-      //      fetchPokemons: [...prevState.fetchPokemons, action.payload.value]
-      //   }
-      //   console.log('After RETURN_OPTION', optionUpdate)
-      //   return optionUpdate
-      //  }
-  
-           default:
-             return prevState;
-       }
+          pokemonPack: [...prevState.pokemonPack, action.payload],
+          resultsPokemons: prevState.resultsPokemons.filter(getPokemon => getPokemon.id !== action.payload.id),
+          totalResults: prevState.resultsPokemons.length - 1,
+      }
+      console.log('After DELETE_POKEMON: ', arrayPokemons);
+      return arrayPokemons
      }
+        default:
+        return prevState;
+     }
+   }
+
