@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/choose-Card/static/css/main.04113a10.chunk.css",
-    "main.js": "/choose-Card/static/js/main.d69ea6e5.chunk.js",
-    "main.js.map": "/choose-Card/static/js/main.d69ea6e5.chunk.js.map",
-    "runtime-main.js": "/choose-Card/static/js/runtime-main.e8f1422b.js",
-    "runtime-main.js.map": "/choose-Card/static/js/runtime-main.e8f1422b.js.map",
-    "static/js/2.0bd7719a.chunk.js": "/choose-Card/static/js/2.0bd7719a.chunk.js",
-    "static/js/2.0bd7719a.chunk.js.map": "/choose-Card/static/js/2.0bd7719a.chunk.js.map",
-    "static/js/3.79ad2789.chunk.js": "/choose-Card/static/js/3.79ad2789.chunk.js",
-    "static/js/3.79ad2789.chunk.js.map": "/choose-Card/static/js/3.79ad2789.chunk.js.map",
-    "index.html": "/choose-Card/index.html",
-    "static/css/main.04113a10.chunk.css.map": "/choose-Card/static/css/main.04113a10.chunk.css.map",
-    "static/js/2.0bd7719a.chunk.js.LICENSE.txt": "/choose-Card/static/js/2.0bd7719a.chunk.js.LICENSE.txt"
+    "main.css": "/React-choose-card-useReducer/static/css/main.04113a10.chunk.css",
+    "main.js": "/React-choose-card-useReducer/static/js/main.a3654c88.chunk.js",
+    "main.js.map": "/React-choose-card-useReducer/static/js/main.a3654c88.chunk.js.map",
+    "runtime-main.js": "/React-choose-card-useReducer/static/js/runtime-main.c91aac6d.js",
+    "runtime-main.js.map": "/React-choose-card-useReducer/static/js/runtime-main.c91aac6d.js.map",
+    "static/js/2.0bd7719a.chunk.js": "/React-choose-card-useReducer/static/js/2.0bd7719a.chunk.js",
+    "static/js/2.0bd7719a.chunk.js.map": "/React-choose-card-useReducer/static/js/2.0bd7719a.chunk.js.map",
+    "static/js/3.79ad2789.chunk.js": "/React-choose-card-useReducer/static/js/3.79ad2789.chunk.js",
+    "static/js/3.79ad2789.chunk.js.map": "/React-choose-card-useReducer/static/js/3.79ad2789.chunk.js.map",
+    "index.html": "/React-choose-card-useReducer/index.html",
+    "static/css/main.04113a10.chunk.css.map": "/React-choose-card-useReducer/static/css/main.04113a10.chunk.css.map",
+    "static/js/2.0bd7719a.chunk.js.LICENSE.txt": "/React-choose-card-useReducer/static/js/2.0bd7719a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e8f1422b.js",
+    "static/js/runtime-main.c91aac6d.js",
     "static/js/2.0bd7719a.chunk.js",
     "static/css/main.04113a10.chunk.css",
-    "static/js/main.d69ea6e5.chunk.js"
+    "static/js/main.a3654c88.chunk.js"
   ]
 }
