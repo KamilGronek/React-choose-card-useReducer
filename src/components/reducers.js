@@ -5,6 +5,7 @@ export const initialState = {
   totalResults: 0
 }
 
+
 export function reducer(prevState,action){
    switch(action.type) {
      case 'FETCH_SUCCESS':

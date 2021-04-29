@@ -3,8 +3,8 @@ import {ResultContext} from "./context"
 import AutoComplete from "./AutoComplete"
 
 function Results(){
-
 const context = useContext(ResultContext);
+
 
 return(
 <div className="bg">
@@ -14,7 +14,7 @@ return(
           <div className ="bg_whiteCircleBlackBorder"></div>
         </div>
     </div>
-    <div className="app" onDragOver={context.dragOver}>
+    <div className="form" onDragOver={context.dragOver}>
         <h2>Pokemon cards({context.totalResults})</h2>
         <form 
             className="input-form"
