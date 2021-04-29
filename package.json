@@ -1,6 +1,6 @@
 {
   "name": "choose-pokemon-card",
-  "homepage": "https://kamilgronek.github.io/choose-Card/",
+  "homepage": "https://kamilgronek.github.io/React-choose-card-useReducer/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
