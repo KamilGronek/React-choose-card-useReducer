@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/choose-Card/static/css/main.d2a8672b.chunk.css",
-    "main.js": "/choose-Card/static/js/main.8b02db5e.chunk.js",
-    "main.js.map": "/choose-Card/static/js/main.8b02db5e.chunk.js.map",
+    "main.css": "/choose-Card/static/css/main.04113a10.chunk.css",
+    "main.js": "/choose-Card/static/js/main.d69ea6e5.chunk.js",
+    "main.js.map": "/choose-Card/static/js/main.d69ea6e5.chunk.js.map",
     "runtime-main.js": "/choose-Card/static/js/runtime-main.e8f1422b.js",
     "runtime-main.js.map": "/choose-Card/static/js/runtime-main.e8f1422b.js.map",
     "static/js/2.0bd7719a.chunk.js": "/choose-Card/static/js/2.0bd7719a.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.79ad2789.chunk.js": "/choose-Card/static/js/3.79ad2789.chunk.js",
     "static/js/3.79ad2789.chunk.js.map": "/choose-Card/static/js/3.79ad2789.chunk.js.map",
     "index.html": "/choose-Card/index.html",
-    "static/css/main.d2a8672b.chunk.css.map": "/choose-Card/static/css/main.d2a8672b.chunk.css.map",
+    "static/css/main.04113a10.chunk.css.map": "/choose-Card/static/css/main.04113a10.chunk.css.map",
     "static/js/2.0bd7719a.chunk.js.LICENSE.txt": "/choose-Card/static/js/2.0bd7719a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e8f1422b.js",
     "static/js/2.0bd7719a.chunk.js",
-    "static/css/main.d2a8672b.chunk.css",
-    "static/js/main.8b02db5e.chunk.js"
+    "static/css/main.04113a10.chunk.css",
+    "static/js/main.d69ea6e5.chunk.js"
   ]
 }
